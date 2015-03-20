@@ -1,0 +1,78 @@
+# FagiadaBlue GRUB2 Theme
+# Based on the Archlinux theme by American_Jesus
+# Designed for any resolution.
+# Created by Santiago Caamaño
+
+# Global Property
+title-text: ""
+title-font: "Sans Bold 14"
+title-color: "#5698fc"
+message-font: "Sans Bold 14"
+message-color: "#000000"
+message-bg-color: "#f6f6f6"
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-box: "menu_bkg_*.png"
+terminal-font: "Sans Regular 12"
+
++ image {
+            id = "__mainlogo__"
+            left = 37%
+		    width = 25%
+		    top = 2%
+		    height = 19%
+		    file = "main_logo.png"
+}
+
+# Show the boot menu
++ boot_menu {
+		left = 30%
+		width = 40%
+		top = 29%
+		height = 50%
+		item_font = "Sans Regular 14"
+		selected_item_font = "Sans Bold 16"
+		item_color = "#eeeeee"
+		selected_item_color = "#ffffff"
+		item_height = 48
+		item_padding = 15
+		item_spacing = 5
+		icon_width = 48
+		icon_height = 48
+		item_icon_space = 20
+		selected_item_pixmap_style= "select_bkg_*.png"
+		menu_pixmap_style = "menu_bkg_*.png"
+		scrollbar = true
+		scrollbar_width = 24
+		scrollbar_thumb = "sb_thumb_*.png"
+		scrollbar_frame = "sb_frame_*.png"
+}
+
+
+# Show logo and circular progress
++ circular_progress
+{
+   id = "__timeout__"
+   left = 40
+   top = 150
+   width = 105
+   height = 105
+   num_ticks = 33
+   ticks_disappear = false
+   start_angle = -67
+   end_angle = -67
+   center_bitmap = "timer.png"
+   tick_bitmap = "tick.png"
+}
+
+# Show an informational message.
++ hbox {
+		top = 100%-35
+		left = 10%
+		+ label {text = "Enter: " font = "Sans Regular 12" color = "#FFFFFF" align = "left"}
+		+ label {text = "Boot Selection     " font = "Sans Regular 12" color = "#FFFFFF" align = "left"}
+		+ label {text = "E: " font = "Sans Regular 12" color = "#FFFFFF" align = "left"}
+		+ label {text = "Edit Selection     " font = "Sans Regular 12" color = "#FFFFFF" align = "left"}
+		+ label {text = "C: " font = "Sans Regular 12" color = "#FFFFFF" align = "left"}
+		+ label {text = "GRUB Commandline" font = "Sans Regular 12" color = "#FFFFFF" align = "left"}
+}
