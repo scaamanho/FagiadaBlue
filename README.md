@@ -1,4 +1,4 @@
-# FagiadaBue
+# FagiadaBlue
 Grub 2 theme
 
 This is free software: you can redistribute it and/or modify
